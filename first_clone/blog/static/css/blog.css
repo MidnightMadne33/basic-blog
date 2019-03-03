@@ -1,0 +1,47 @@
+.techfont {
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.bigbrand {
+  font-size: 1.5em;
+}
+
+.centerstage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postdate {
+  text-align: center;
+}
+
+.posttitle {
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+.postcontent {
+  font-family: 'Montserrat', serif;
+  font-size: 1.5em;
+}
+
+
+.nav-link {
+  font-size: 1.2em;
+}
+
+.errorlist {
+  color: red;
+}
+
+form {
+  margin-top:30px;
+  margin-bottom: 10px;
+}
+
+.editable {
+  border: 1px #bfbfbf solid;
+}
