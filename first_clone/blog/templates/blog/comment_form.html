@@ -9,6 +9,8 @@
     <input class="save btn btn-primary" type="submit" value="Post comment">
   </form>
   <script>
-    var editor = new MediumEditor('.editable');
+    var editor = new MediumEditor('.editable', {
+      placeholder: false
+  });
   </script>
 {% endblock %}

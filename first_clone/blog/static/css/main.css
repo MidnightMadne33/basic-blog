@@ -1,0 +1,86 @@
+p {
+  font-family: 'Montserrat', serif;
+  font-size: 1.5em;
+}
+
+.techfont {
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.bigbrand {
+  font-size: 1.5em;
+}
+
+.centerstage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postdate {
+  text-align: center;
+}
+
+.posttitle {
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+.postcontent {
+  font-family: 'Montserrat', serif;
+  font-size: 1.5em;
+}
+
+
+.nav-link {
+  font-size: 1.2em;
+}
+
+.errorlist {
+  color: red;
+}
+
+form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-form label {
+  font-size: 1.5em;
+  font-weight: 800;
+  display: block;
+}
+
+.editable {
+  border: 1px #bfbfbf solid;
+  padding: 10px;
+  min-height: 300px;
+}
+
+.editable p {
+  font-size: 0.7em;
+}
+
+.display-4 {
+  font-size: 2em;
+}
+
+.btn {
+  font-size: 1em;
+}
+
+.btn.save {
+  margin: auto;
+  display: block;
+}
+
+.btn-wrapper{
+  text-align: right;
+}
+
+.author-name {
+  font-weight: bold;
+  color: #8f8f8f
+}

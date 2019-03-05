@@ -12,6 +12,7 @@ class PostForm(forms.ModelForm):
             'text':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'})
         }
 
+    field_order = ['author', 'title', 'text']
 
 class CommentForm(forms.ModelForm):
 
