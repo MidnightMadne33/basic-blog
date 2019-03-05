@@ -1,11 +1,14 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-
+  {% if posts %}
   {% for post in posts %}
     <div class="post">
       <p class="date">Created: {{ post.created_date|date:"d-m-Y"}}</p>
       <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
     </div>
   {% endfor %}
+  {% else %}
+  <p class="display-4 text-center">No blogs available in draft!</p>
+  {% endif %}
 {% endblock %}

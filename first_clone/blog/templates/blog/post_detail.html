@@ -8,7 +8,9 @@
       {{ post.published_date }}
     </div>
   {% else %}
-    <a class="btn btn-primary" href="{% url 'blog:post_publish' pk=post.pk %}">Publish</a>
+  <div class="btn-wrapper">
+    <a class="btn btn-primary btn-publish" href="{% url 'blog:post_publish' pk=post.pk %}">Publish</a>
+  </div>
   {% endif %}
 
   <p class="postcontent">{{ post.text|safe|linebreaks }} </p>
@@ -27,25 +29,26 @@
 
   </div>
 
+  {% if post.published_date %}
   <br>
   <hr>
-
-  <a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=post.pk %}">Add comment</a>
+  <div class="btn-wrapper">
+    <a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=post.pk %}">Add comment</a>
+  </div>
 
   <hr>
   <br>
-
   <div class="container">
     {% for comment in post.comments.all %}
-    
+
     {% if user.is_authenticated or comment.approved_comment %}
       {{ comment.created_date}}
       {% if not comment.approved_comment %}
           <a class="btn btn-primary" href="{% url 'blog:comment_remove' pk=comment.pk %}">Remove comment</a>
-          <a class="btn btn-primary" href="{% url 'blog:comment_approve' pk=post.pk %}">Approve comment</a>
+          <a class="btn btn-primary" href="{% url 'blog:comment_approve' pk=comment.pk %}">Approve comment</a>
       {% endif %}
 
-      <p>{{ comment.author }}:</p>
+      <p class="author-name">{{ comment.author }}:</p>
       <p>{{ comment.text|safe|linebreaks}}</p>
 
       <hr>
@@ -54,4 +57,5 @@
     <p>No comments.</p>
     {% endfor %}
   </div>
+{% endif %}
 {% endblock %}

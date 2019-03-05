@@ -46,6 +46,7 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
     form_class = PostForm
 
     model = Post
+    template_name = 'blog/post_update_form.html'
 
 
 class PostDeleteView(LoginRequiredMixin, DeleteView):

@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<h3 class="display-3 text-center">Create blog</h3>
+<h3 class="display-3 text-center">Edit blog</h3>
 <form class="post-form" method="post">
   {% csrf_token %}
   {{ form.as_p }}
-  <input class="btn btn-success save" type="submit" value="Create">
+  <input class="btn btn-success save" type="submit" value="Save">
 </form>
 
 <script>

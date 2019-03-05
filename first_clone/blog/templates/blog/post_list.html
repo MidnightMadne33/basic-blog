@@ -11,6 +11,11 @@
         </div>
         <a href="{% url 'blog:post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
       </div>
+      {% empty %}
+      <p class="display-4 text-center">No blogs published yet! {% if user.is_authenticated %}
+      <a class="" href="{% url 'blog:post_new' %}">Create</a> here. {% else %}
+      <a class="" href="{% url 'login' %}">Login</a> and publish your own blog!
+      {% endif %}</p>
     {% endfor %}
   </div>
 

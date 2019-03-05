@@ -19,7 +19,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    #check for all aproved comments
+    #check for all approved comments
     def approve_comments(self):
         return self.comments.filter(approved_comment=True)
 
